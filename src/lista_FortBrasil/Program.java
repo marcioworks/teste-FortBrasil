@@ -24,14 +24,17 @@ public class Program {
 		}
 		int count = 0;
 		for (String s : telefones) {
-			for (int i = 0; i < telefone.length(); i++) {
-				if (telefones[0].charAt(i) == telefones[1].charAt(i)) {
-					count++;
+			if (telefones[0].charAt(0) == telefones[1].charAt(0)) {
+				for (int i = 0; i < telefone.length(); i++) {
+					if (telefones[0].charAt(i) == telefones[1].charAt(i)) {
+						count++;
+					}
 				}
 			}
 		}
-		count = count/telefones.length;
-		System.out.println(count);
+
+		count = count / telefones.length;
+		System.out.println("nesta impressão você irá economizar " + count + " caracteres");
 
 	}
 }
