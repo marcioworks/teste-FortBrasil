@@ -23,11 +23,14 @@ public class Program {
 
 		}
 		int count = 0;
-		for (int i = 0; i < telefone.length(); i++) {
-			if (telefones[0].charAt(i) == telefones[1].charAt(i)) {
-				count++;
+		for (String s : telefones) {
+			for (int i = 0; i < telefone.length(); i++) {
+				if (telefones[0].charAt(i) == telefones[1].charAt(i)) {
+					count++;
+				}
 			}
 		}
+		count = count/telefones.length;
 		System.out.println(count);
 
 	}
